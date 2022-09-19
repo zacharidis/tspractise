@@ -1,15 +1,21 @@
 class Customer {
     // 
-    protected firstName: string ; 
-    protected lastName : string ; 
+    private firstName: string ; 
+    private lastName : string ; 
 
 
     constructor(theFirst: string , theLast: string){
         this.firstName = theFirst;
-        this.lastName = theLast;
-
+        this.lastName = theLast; 
     }
 
+    public getFirstName() : string { 
+        return this.firstName;
+    }
+
+    public setFirstName(theFirst : string) : void {
+        this.firstName = theFirst;
+    }
 
 
 
@@ -20,5 +26,6 @@ class Customer {
 
 let myCustomer = new Customer("G","Z");
 
-console.log(myCustomer.lastName);
-console.log(myCustomer.lastName);
+console.log(myCustomer.getFirstName);
+myCustomer.setFirstName("New name");
+console.log(myCustomer.getFirstName);
